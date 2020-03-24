@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net472</TargetFramework>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AdamsLair.Duality.Editor.Plugins.CamView" Version="3.0.4" />
+    <PackageReference Include="AdamsLair.Duality.Editor.Plugins.HelpAdvisor" Version="3.0.4" />
+    <PackageReference Include="AdamsLair.Duality.Editor.Plugins.LogView" Version="3.0.5" />
+    <PackageReference Include="AdamsLair.Duality.Editor.Plugins.ObjectInspector" Version="3.0.5" />
+    <PackageReference Include="AdamsLair.Duality.Editor.Plugins.ProjectView" Version="3.0.5" />
+    <PackageReference Include="AdamsLair.Duality.Editor.Plugins.SceneView" Version="3.0.4" />
+    <PackageReference Include="AdamsLair.Duality.Editor" Version="3.1.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GameLauncher\GameLauncher.csproj" />
+  </ItemGroup>
+
+</Project>
