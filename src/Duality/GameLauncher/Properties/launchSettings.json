@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "GameLauncher": {
+      "commandName": "Executable",
+      "executablePath": ".\\DualityLauncher.exe"
+    }
+  }
+}
