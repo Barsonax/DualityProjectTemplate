@@ -5,6 +5,13 @@
     <TargetFramework>net472</TargetFramework>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <OutputPath>../../../../</OutputPath>
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
   </PropertyGroup>
 
   <ItemGroup>
@@ -16,5 +23,10 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Plugins\GamePlugin\GamePlugin.csproj" />
   </ItemGroup>
+
+  <Target Name="CoreCompile" />
+  <PropertyGroup>
+    <SkipCopyBuildProduct>true</SkipCopyBuildProduct>
+  </PropertyGroup>
 
 </Project>
