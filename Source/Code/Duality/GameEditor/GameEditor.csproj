@@ -4,9 +4,11 @@
     <OutputType>Library</OutputType>
     <TargetFramework>net472</TargetFramework>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
-    <OutputPath>../../../../</OutputPath>
     <DebugType>none</DebugType>
     <DebugSymbols>false</DebugSymbols>
+    <DeployFolder>$(MSBuildProjectDirectory)\..\..\..\..</DeployFolder>
+    <AllowedReferenceRelatedFileExtensions>.pdb</AllowedReferenceRelatedFileExtensions>
+
   </PropertyGroup>
 
   <ItemGroup>
@@ -20,6 +22,28 @@
     <PackageReference Include="AdamsLair.Duality.Editor.Plugins.SceneView" Version="3.0.4" />
     <PackageReference Include="AdamsLair.Duality.Editor" Version="4.0.0" />
   </ItemGroup>
+
+  <Target Name="CopyNugetPackageFiles" BeforeTargets="Build">
+    <ItemGroup>
+      <PackageReferenceFiles Include="%(Reference.RelativeDir)%(Reference.Filename).xml;%(Reference.RelativeDir)%(Reference.Filename).pdb" />
+    </ItemGroup>
+    
+    <Message Text="Copying nuget package files @(PackageReferenceFiles) to $(OutputPath)" Importance="High" />
+    <Copy SourceFiles="@(PackageReferenceFiles)" DestinationFolder="$(OutputPath)" Condition="Exists('%(RootDir)%(Directory)%(Filename)%(Extension)')" />
+  </Target>
+
+  <Target Name="Foo" AfterTargets="Build">
+    <ItemGroup>
+      <PluginFiles Include="$(OutputPath)*.core.dll;$(OutputPath)*.core.pdb;$(OutputPath)*.core.xml;$(OutputPath)*.editor.dll;$(OutputPath)*.editor.pdb;$(OutputPath)*.editor.xml" />
+      <LibFiles Include="$(OutputPath)*.exe;$(OutputPath)*.dll;$(OutputPath)*.pdb;$(OutputPath)*.xml" Exclude="@(PluginFiles)" />
+    </ItemGroup>
+
+    <Message Text="Copying plugin files @(PluginFiles) to $(DeployFolder)/Plugins" Importance="High" />
+    <Copy SourceFiles="@(PluginFiles)" DestinationFolder="$(DeployFolder)/Plugins" />
+
+    <Message Text="Copying lib files @(LibFiles) to $(DeployFolder)" Importance="High" />
+    <Copy SourceFiles="@(LibFiles)" DestinationFolder="$(DeployFolder)" />
+  </Target>
 
   <Target Name="CoreCompile" />
   <PropertyGroup>

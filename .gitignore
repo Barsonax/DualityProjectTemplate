@@ -1,9 +1,3 @@
 ﻿**/bin
 **/obj
-Temp
 Source/Code/.vs
-/*.pdb
-/*.dll
-/*.exe
-/*.txt
-/*.xml
