@@ -1,9 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <PackageReference Include="AdamsLair.Duality.Backend.DefaultOpenTK" Version="3.2.0" />
-    <PackageReference Include="AdamsLair.Duality.Launcher" Version="3.0.4" />
-    <PackageReference Include="AdamsLair.Duality.Plugins.Compatibility" Version="3.0.4" />
+    <PackageReference Include="AdamsLair.Duality.Backend.DefaultOpenTK" Version="4.0.0" />
+    <PackageReference Include="AdamsLair.Duality.Launcher" Version="4.0.0" />
+    <PackageReference Include="AdamsLair.Duality.Plugins.Compatibility" Version="4.0.0" />
   </ItemGroup>
 
   <ItemGroup>

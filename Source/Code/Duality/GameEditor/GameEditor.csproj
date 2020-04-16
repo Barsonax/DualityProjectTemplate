@@ -1,14 +1,14 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   
   <ItemGroup>
-    <PackageReference Include="AdamsLair.Duality.Editor.Backend.DefaultOpenTK" Version="3.1.3" />
-    <PackageReference Include="AdamsLair.Duality.Editor.Plugins.Base" Version="3.0.4" />
-    <PackageReference Include="AdamsLair.Duality.Editor.Plugins.CamView" Version="3.0.4" />
-    <PackageReference Include="AdamsLair.Duality.Editor.Plugins.HelpAdvisor" Version="3.0.4" />
-    <PackageReference Include="AdamsLair.Duality.Editor.Plugins.LogView" Version="3.0.5" />
-    <PackageReference Include="AdamsLair.Duality.Editor.Plugins.ObjectInspector" Version="3.0.5" />
-    <PackageReference Include="AdamsLair.Duality.Editor.Plugins.ProjectView" Version="3.0.5" />
-    <PackageReference Include="AdamsLair.Duality.Editor.Plugins.SceneView" Version="3.0.4" />
+    <PackageReference Include="AdamsLair.Duality.Editor.Backend.DefaultOpenTK" Version="4.0.0" />
+    <PackageReference Include="AdamsLair.Duality.Editor.Plugins.Base" Version="4.0.0" />
+    <PackageReference Include="AdamsLair.Duality.Editor.Plugins.CamView" Version="4.0.0" />
+    <PackageReference Include="AdamsLair.Duality.Editor.Plugins.HelpAdvisor" Version="4.0.0" />
+    <PackageReference Include="AdamsLair.Duality.Editor.Plugins.LogView" Version="4.0.0" />
+    <PackageReference Include="AdamsLair.Duality.Editor.Plugins.ObjectInspector" Version="4.0.0" />
+    <PackageReference Include="AdamsLair.Duality.Editor.Plugins.ProjectView" Version="4.0.0" />
+    <PackageReference Include="AdamsLair.Duality.Editor.Plugins.SceneView" Version="4.0.0" />
     <PackageReference Include="AdamsLair.Duality.Editor" Version="4.0.0" />
   </ItemGroup>
   
