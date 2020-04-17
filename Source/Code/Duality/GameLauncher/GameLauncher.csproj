@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <PackageReference Include="AdamsLair.Duality.Backend.DefaultOpenTK" Version="4.0.0" />
+    <PackageReference Include="AdamsLair.Duality.Backend.DotNetFramework" Version="4.0.0" />
     <PackageReference Include="AdamsLair.Duality.Launcher" Version="4.0.0" />
     <PackageReference Include="AdamsLair.Duality.Plugins.Compatibility" Version="4.0.0" />
   </ItemGroup>
