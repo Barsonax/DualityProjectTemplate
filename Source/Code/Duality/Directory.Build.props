@@ -21,14 +21,14 @@
   <Target Name="CopyBuildOutputToDeploy" AfterTargets="Build">
     <ItemGroup>
       <PluginFiles Include="$(OutputPath)*.core.dll;$(OutputPath)*.core.pdb;$(OutputPath)*.core.xml;$(OutputPath)*.editor.dll;$(OutputPath)*.editor.pdb;$(OutputPath)*.editor.xml" />
-      <LibFiles Include="$(OutputPath)*.exe;$(OutputPath)*.dll;$(OutputPath)*.pdb;$(OutputPath)*.xml" Exclude="@(PluginFiles)" />
+      <LibFiles Include="$(OutputPath)**/*" Exclude="@(PluginFiles)" />
     </ItemGroup>
 
     <Message Text="Copying plugin files @(PluginFiles) to $(DeployFolder)/Plugins" Importance="High" />
     <Copy SourceFiles="@(PluginFiles)" DestinationFolder="$(DeployFolder)/Plugins" />
 
     <Message Text="Copying lib files @(LibFiles) to $(DeployFolder)" Importance="High" />
-    <Copy SourceFiles="@(LibFiles)" DestinationFolder="$(DeployFolder)" />
+    <Copy SourceFiles="@(LibFiles)" DestinationFiles="@(LibFiles->'$(DeployFolder)\%(RecursiveDir)%(Filename)%(Extension)')" />
   </Target>
 
   <Target Name="CoreCompile" />
