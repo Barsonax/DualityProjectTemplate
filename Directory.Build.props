@@ -1,0 +1,5 @@
+<Project>
+  <PropertyGroup>
+    <DeployFolder>$(MSBuildThisFileDirectory)</DeployFolder>
+  </PropertyGroup>
+</Project>
