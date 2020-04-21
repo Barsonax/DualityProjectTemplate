@@ -2,7 +2,8 @@
   "profiles": {
     "GameLauncher": {
       "commandName": "Executable",
-      "executablePath": ".\\..\\..\\..\\..\\..\\..\\DualityLauncher.exe"
+      "executablePath": ".\\DualityLauncher.exe",
+      "workingDirectory": ".\\..\\..\\..\\.."
     }
   }
 }
