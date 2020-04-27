@@ -9,7 +9,7 @@
     <PackageReference Include="AdamsLair.Duality.Editor.Plugins.ObjectInspector" Version="4.0.0-alpha" />
     <PackageReference Include="AdamsLair.Duality.Editor.Plugins.ProjectView" Version="4.0.0-alpha" />
     <PackageReference Include="AdamsLair.Duality.Editor.Plugins.SceneView" Version="4.0.0-alpha" />
-    <PackageReference Include="AdamsLair.Duality.Editor" Version="4.0.0" />
+    <PackageReference Include="AdamsLair.Duality.Editor" Version="4.0.0-alpha" />
   </ItemGroup>
   
   <ItemGroup>
