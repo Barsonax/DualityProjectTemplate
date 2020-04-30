@@ -6,6 +6,7 @@
     <DebugType>none</DebugType>
     <DebugSymbols>false</DebugSymbols>
     <AllowedReferenceRelatedFileExtensions>.pdb</AllowedReferenceRelatedFileExtensions>
+    <RuntimeIdentifier>any</RuntimeIdentifier>
   </PropertyGroup>
 
   <Target Name="CopyNugetPackageFiles" BeforeTargets="Build">
